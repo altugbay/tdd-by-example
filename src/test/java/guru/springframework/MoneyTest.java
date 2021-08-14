@@ -45,7 +45,7 @@ public class MoneyTest {
     @Test
     void testPlusReturnsSum() {
         Money five = Money.dollar(5);
-        Expression result = five.plus(5);
+        Expression result = five.plus(Money.dollar(5));
         Sum sum = (Sum) result;
         assertEquals(five, sum.augment);
         assertEquals(five, sum.addmend);
